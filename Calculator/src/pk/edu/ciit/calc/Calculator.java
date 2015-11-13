@@ -7,4 +7,7 @@ public class Calculator {
 	int subtract(int num1, int num2){
 		return num1 - num2;
 	}
+	int devide(int num1, int num2){
+		return num1 / num2;
+	}
 }
