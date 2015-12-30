@@ -44,7 +44,7 @@ public class CalculatorTest {
 		
 		assertEquals(5, result);
 	}
-	@Ignore
+	
 	@Test (expected = ArithmeticException.class)
 	public void testDevideException() throws ArithmeticException{
 		calculator.devide(10, 0);
