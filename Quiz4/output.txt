@@ -1,0 +1,1 @@
+hello i am sajidBufferedReader in = new BufferedReader(new FileReader("K:\\location\\inputfile.txt")); String text = in.readLine(); in.close();
