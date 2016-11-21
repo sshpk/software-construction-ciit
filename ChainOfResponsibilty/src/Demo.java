@@ -10,12 +10,12 @@ public class Demo {
 	    while(amount != -1){
 	    	System.out.println("Enter amount to dispense, -1 to quit");
 	    	amount = input.nextInt();
-	    	if (amount % 500 != 0) {
-	    		System.out.println("Amount should be in multiple of 500s.");
-	    	}
-	    	else{
+	    	if (amount % 500 == 0) {
 	    		// process the request
 	    		atm.dispense(new Currency(amount));
+	    	}
+	    	else{
+	    		System.out.println("Amount should be in multiple of 500s.");
 	    	}
 	    }
 	    input.close();

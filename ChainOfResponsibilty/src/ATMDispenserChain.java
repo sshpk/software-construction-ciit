@@ -5,8 +5,8 @@ public class ATMDispenserChain {
  
     public ATMDispenserChain() {
         // initialize the chain
-        this.c1 = new Rupees1000Dispenser();
-        DispenserChain c2 = new Rupees500Dispenser();
+        this.c1 = new RupeesDispenser(1000);
+        DispenserChain c2 = new RupeesDispenser(500);
        
  
         // set the chain of responsibility

@@ -1,8 +1,12 @@
 
-public class Rupees500Dispenser implements DispenserChain{
+public class RupeesDispenser implements DispenserChain{
 
 	private DispenserChain chain;
-	private final int WORTH = 500;
+	private int worth;
+	
+	public RupeesDispenser(int worth) {
+		this.worth = worth;
+	}
     
     @Override
     public void setNextChain(DispenserChain nextChain) {
@@ -11,10 +15,10 @@ public class Rupees500Dispenser implements DispenserChain{
  
     @Override
     public void dispense(Currency cur) {
-        if(cur.getAmount() >= WORTH){
-            int num = cur.getAmount()/WORTH;
-            int remainder = cur.getAmount() % WORTH;
-            System.out.println("Dispensing "+num+" "+WORTH+" note");
+        if(cur.getAmount() >= worth){
+            int num = cur.getAmount()/worth;
+            int remainder = cur.getAmount() % worth;
+            System.out.println("Dispensing "+num+" "+worth+" note");
             if(remainder !=0) 
             	this.chain.dispense(new Currency(remainder));
         }else{
