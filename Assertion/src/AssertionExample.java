@@ -7,7 +7,7 @@ public class AssertionExample {
 		System.out.print("Enter ur age ");  
 
 		int value = scanner.nextInt();  
-		assert value>=18:" Not valid";  
+		assert value>=13:" Not valid";  
 
 		System.out.println("value is "+value); 
 		scanner.close();
