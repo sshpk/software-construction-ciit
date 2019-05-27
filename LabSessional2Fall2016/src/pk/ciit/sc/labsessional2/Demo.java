@@ -36,6 +36,10 @@ public class Demo {
 		invoker = new DeviceInvoker(switchOnCommand);
 		invoker.execute();
 		
+		SwitchOffCommand switchOffCommand = new SwitchOffCommand(stereo);
+		invoker = new DeviceInvoker(switchOffCommand);
+		invoker.execute();
+		
 	}
 
 }
