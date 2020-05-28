@@ -1,6 +1,6 @@
 package pk.ciit.visitor;
 
-public class Book implements Visitable{
+public class Book implements Element{
 	private double price;
 	private String name;
 	

@@ -1,17 +1,16 @@
 import java.util.HashMap;
 
+
 public class ShapeFactory {
-	private static final HashMap<String, Shape> circleMap = 
+	private static final HashMap<String, CircleType> circleMap = 
 			new HashMap();
-	public static Shape getCircle(String color) {
-		Circle circle = (Circle)circleMap.get(color);
-		if(circle == null) {
-			circle = new Circle(color);
-			circleMap.put(color, circle);
-			System.out.println("Creating circle of color : " + 
-					color);
-		}
-		return circle;
+	public static CircleType getCircleType(String name, String color, int radius) {
+		CircleType result = circleMap.get(name);
+        if (result == null) {
+            result = new CircleType(name, color, radius);
+            circleMap.put(name, result);
+        }
+        return result;
 	}
 }
 

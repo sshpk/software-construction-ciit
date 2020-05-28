@@ -1,5 +1,7 @@
 package pk.ciit.interpreter;
 
+import pk.cui.interpreter.Context;
+
 public abstract class Expression {
 	public void interpret(Context context)
     {

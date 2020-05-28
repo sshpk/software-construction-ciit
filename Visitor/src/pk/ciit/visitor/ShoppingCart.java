@@ -5,15 +5,15 @@ import java.util.List;
 
 public class ShoppingCart {
 	//normal shopping cart stuff
-	private List<Visitable> items = new ArrayList<Visitable>();
-	public void addItem(Visitable item){
+	private List<Element> items = new ArrayList<Element>();
+	public void addItem(Element item){
 		items.add(item);
 	}
 	public double calculatePayeable() {
 		//create a visitor
 		PayeableVisitor visitor = new PayeableVisitor();
 		//iterate through all items
-		for(Visitable item: items) {
+		for(Element item: items) {
 			item.accept(visitor);
 		}
 		double payeable = visitor.getTotalPayeableForCart();

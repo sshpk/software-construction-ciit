@@ -1,7 +1,8 @@
+import pk.cui.sc.chain.Currency;
 
-public class RupeesDispenser implements DispenserChain{
+public class RupeesDispenser implements Dispenser{
 
-	private DispenserChain chain;
+	private Dispenser next;
 	private int worth;
 	
 	public RupeesDispenser(int worth) {
@@ -9,8 +10,8 @@ public class RupeesDispenser implements DispenserChain{
 	}
     
     @Override
-    public void setNextChain(DispenserChain nextChain) {
-        this.chain=nextChain;
+    public void setNext(Dispenser next) {
+        this.next=next;
     }
  
     @Override
@@ -19,10 +20,13 @@ public class RupeesDispenser implements DispenserChain{
             int num = cur.getAmount()/worth;
             int remainder = cur.getAmount() % worth;
             System.out.println("Dispensing "+num+" "+worth+" note");
-            if(remainder !=0) 
-            	this.chain.dispense(new Currency(remainder));
-        }else{
-            this.chain.dispense(cur);
+            if(remainder !=0 && next!=null) 
+            	next.dispense(new Currency(remainder));
+        }else if(next!=null){
+            next.dispense(cur);
+        }
+        else{
+        	System.out.println(cur.getAmount()+" cannot be processed");
         }
     }
 

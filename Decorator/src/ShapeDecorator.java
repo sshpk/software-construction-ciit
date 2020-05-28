@@ -1,3 +1,4 @@
+import pk.cui.sc.decorator.Shape;
 
 public abstract class ShapeDecorator implements Shape{
 	protected Shape decoratedShape;

@@ -1,6 +1,6 @@
 package pk.ciit.visitor;
 
-public class CD implements Visitable{
+public class CD implements Element{
 	private String title;
 	private double price;
 	public CD(String title, double price) {
