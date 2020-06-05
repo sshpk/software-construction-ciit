@@ -14,12 +14,12 @@ public class Calculator {
 	}
 	
 	/**
-	 * This method devides two integers and returns the quotient.
+	 * This method divides two integers and returns the quotient.
 	 * 
 	 * @param devidend is the first integer (dividend)
 	 * @param devisor is the second integer (devisor)
 	 * @return the quotient is returned
-	 * @throws IllegalArgumentException when you try to devide by zero
+	 * @throws IllegalArgumentException when you try to divide by zero
 	 */
 	public int devide(int devidend, int devisor) throws IllegalArgumentException{
 		int quotient = 0;

@@ -1,0 +1,3 @@
+Q6.	
+Analyze the quality of the following program. 
+Identify the problems (non-compliance to good programming practices/guidelines) and rewrite the program after removing these problems.   
