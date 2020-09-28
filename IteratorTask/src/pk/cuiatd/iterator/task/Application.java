@@ -13,12 +13,12 @@ public class Application {
 		fb.addFriend(new Profile("yousuf", "yousuf@abc.de"));
 		
 		System.out.println("-------Coworkers------");
-		Iterator it = fb.getCoworkersIterator();
+		It it = fb.getCoworkersIt();
 		while(it.hasMore()){
 			System.out.println(it.getNext());
 		}
 		System.out.println("-------Friends------");
-		it = fb.getFriendsIterator();
+		it = fb.getFriendsIt();
 		while(it.hasMore()){
 			System.out.println(it.getNext());
 		}

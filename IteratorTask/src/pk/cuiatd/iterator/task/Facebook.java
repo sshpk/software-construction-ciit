@@ -7,18 +7,18 @@ public class Facebook implements SocialNetwork{
 	List<Profile> friends = new ArrayList<Profile>();
 	List<Profile> coworkers = new ArrayList<Profile>();
 	@Override
-	public Iterator getFriendsIterator() {
+	public It getFriendsIt() {
 		Profile[] profiles=new Profile[friends.size()];
 		profiles = friends.toArray(profiles);
-		Iterator it = new FacebookIterator(profiles);
+		It it = new FacebookIt(profiles);
 		return it;
 	}
 
 	@Override
-	public Iterator getCoworkersIterator() {
+	public It getCoworkersIt() {
 		Profile[] profiles=new Profile[coworkers.size()];
 		profiles = coworkers.toArray(profiles);
-		Iterator it = new FacebookIterator(profiles);
+		It it = new FacebookIt(profiles);
 		return it;
 	}
 	public void addFriend(Profile profile){

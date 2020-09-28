@@ -9,9 +9,9 @@ public class Demo {
 
     public static void main(String[] args) {
         System.out.println("celsius * 9 / 5 + thirty");
-        String postfix = Interpreter.convertToPostfix("celsius * 9 / 5 + thirty");
+        String postfix = Evaluator.convertToPostfix("celsius * 9 / 5 + thirty");
         System.out.println(postfix);
-        Operand expr = Interpreter.buildSyntaxTree(postfix);
+        Operand expr = Evaluator.buildSyntaxTree(postfix);
         expr.traverse(1);
         System.out.println();
         HashMap < String, Integer > map = new HashMap<>();

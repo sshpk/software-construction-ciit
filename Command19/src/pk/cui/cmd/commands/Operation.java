@@ -1,6 +1,6 @@
 package pk.cui.cmd.commands;
 
-public interface Command {
+public interface Operation {
 	public void execute();
 	public void undo();
 }

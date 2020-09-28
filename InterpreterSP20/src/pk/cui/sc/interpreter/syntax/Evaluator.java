@@ -2,7 +2,7 @@ package pk.cui.sc.interpreter.syntax;
 
 import java.util.Stack;
 
-public class Interpreter {
+public class Evaluator {
 	public static boolean precedence(char a, char b) {
 		String high = "*/", low = "+-";
 		if (a == '(') {

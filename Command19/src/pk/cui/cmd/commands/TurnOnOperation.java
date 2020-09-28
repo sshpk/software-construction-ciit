@@ -2,9 +2,9 @@ package pk.cui.cmd.commands;
 
 import pk.cui.cmd.recievers.Device;
 
-public class TurnOnCommand implements Command{
+public class TurnOnOperation implements Operation{
 	Device device;
-	public TurnOnCommand(Device device){
+	public TurnOnOperation(Device device){
 		this.device=device;
 	}
 	@Override

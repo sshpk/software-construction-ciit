@@ -1,13 +1,13 @@
 package pk.cui.cmd.remote;
 
-import pk.cui.cmd.commands.Command;
-import pk.cui.cmd.commands.TurnOffCommand;
-import pk.cui.cmd.commands.TurnOnCommand;
+import pk.cui.cmd.commands.Operation;
+import pk.cui.cmd.commands.TurnOffOperation;
+import pk.cui.cmd.commands.TurnOnOperation;
 import pk.cui.cmd.recievers.Device;
 
 public class Remote {
 	private Device device;
-	private Command lastCommand;
+	private Operation lastOperation;
 	public Remote(Device device){
 		setDevice(device);
 	}
@@ -16,17 +16,17 @@ public class Remote {
 		
 	}
 	public void pressOnButton(){
-		lastCommand = new TurnOnCommand(device);
-		lastCommand.execute();
+		lastOperation = new TurnOnOperation(device);
+		lastOperation.execute();
 	}
 	public void pressOffButton(){
-		lastCommand = new TurnOffCommand(device);
-		lastCommand.execute();
+		lastOperation = new TurnOffOperation(device);
+		lastOperation.execute();
 	}
 	public void pressUndoButton(){
-		if(lastCommand==null)
+		if(lastOperation==null)
 			System.out.println("No command to undo");
 		else
-			lastCommand.undo();
+			lastOperation.undo();
 	}
 }

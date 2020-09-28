@@ -1,6 +1,6 @@
 package pk.cuiatd.iterator.task;
 
-public interface Iterator {
+public interface It {
 	Boolean hasMore();
 	Profile getNext();
 	

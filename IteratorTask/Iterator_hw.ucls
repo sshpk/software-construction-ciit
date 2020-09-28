@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <interface id="1" language="java" name="pk.cuiatd.iterator.task.Iterator" project="IteratorTask" 
-    file="/IteratorTask/src/pk/cuiatd/iterator/task/Iterator.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="1" language="java" name="pk.cuiatd.iterator.task.It" project="IteratorTask" 
+    file="/IteratorTask/src/pk/cuiatd/iterator/task/It.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="712" y="40"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="pk.cuiatd.iterator.task.FacebookIterator" project="IteratorTask" 
-    file="/IteratorTask/src/pk/cuiatd/iterator/task/FacebookIterator.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="pk.cuiatd.iterator.task.FacebookIt" project="IteratorTask" 
+    file="/IteratorTask/src/pk/cuiatd/iterator/task/FacebookIt.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="712" y="231"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -51,9 +51,14 @@
     <end type="TARGET" refId="1"/>  
   </realization>  
   <association id="7">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="8" name="profiles"/>      
-      <multiplicity id="9" minimum="0" maximum="2147483647"/>    
+    <bendpoint x="538" y="222"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="8" name="friends">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="9" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
@@ -63,18 +68,25 @@
     <end type="TARGET" refId="5"/>  
   </realization>  
   <association id="11">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="12" name="coworkers"/>      
-      <multiplicity id="13" minimum="0" maximum="2147483647"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="12" name="profiles">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="13" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="14">    
-    <bendpoint x="538" y="222"/>    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="15" name="friends"/>      
-      <multiplicity id="16" minimum="0" maximum="2147483647"/>    
+      <attribute id="15" name="coworkers">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="16" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  

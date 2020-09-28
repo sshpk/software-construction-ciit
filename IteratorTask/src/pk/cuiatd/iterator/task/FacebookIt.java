@@ -1,10 +1,10 @@
 package pk.cuiatd.iterator.task;
 
-public class FacebookIterator implements Iterator{
+public class FacebookIt implements It{
 	private Profile[] profiles;
 	private int index=0;
 	
-	public FacebookIterator(Profile[] profiles) {
+	public FacebookIt(Profile[] profiles) {
 		this.profiles=profiles;
 	}
 

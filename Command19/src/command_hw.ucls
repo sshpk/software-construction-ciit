@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="pk.cui.cmd.commands.TurnOnCommand" project="Command19" 
-    file="/Command19/src/pk/cui/cmd/commands/TurnOnCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="pk.cui.cmd.commands.TurnOnOperation" project="Command19" 
+    file="/Command19/src/pk/cui/cmd/commands/TurnOnOperation.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="905" y="-16"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,16 +19,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="3" language="java" name="pk.cui.cmd.commands.Command" project="Command19" 
-    file="/Command19/src/pk/cui/cmd/commands/Command.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1083" y="-16"/>    
-    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="4" language="java" name="pk.cui.cmd.recievers.Light" project="Command19" 
+  <class id="3" language="java" name="pk.cui.cmd.recievers.Light" project="Command19" 
     file="/Command19/src/pk/cui/cmd/recievers/Light.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="740" y="166"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
@@ -37,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="pk.cui.cmd.commands.TurnOffCommand" project="Command19" 
-    file="/Command19/src/pk/cui/cmd/commands/TurnOffCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="pk.cui.cmd.commands.TurnOffOperation" project="Command19" 
+    file="/Command19/src/pk/cui/cmd/commands/TurnOffOperation.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="905" y="166"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,7 +37,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="6" language="java" name="pk.cui.cmd.recievers.Device" project="Command19" 
+  <interface id="5" language="java" name="pk.cui.cmd.recievers.Device" project="Command19" 
     file="/Command19/src/pk/cui/cmd/recievers/Device.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="602" y="-16"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
@@ -55,7 +46,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="7" language="java" name="pk.cui.cmd.remote.Remote" project="Command19" 
+  <class id="6" language="java" name="pk.cui.cmd.remote.Remote" project="Command19" 
     file="/Command19/src/pk/cui/cmd/remote/Remote.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="153" width="141" x="1013" y="73"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
@@ -64,21 +55,26 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="8">    
-    <bendpoint x="742" y="-16"/>    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="9" name="device">        
+  <association id="7">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="8" name="device">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="10" minimum="0" maximum="1">        
+      <multiplicity id="9" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <realization id="10">    
+    <bendpoint x="741" y="78"/>    
+    <bendpoint x="602" y="78"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
   <association id="11">    
-    <end type="SOURCE" refId="7" navigable="false">      
+    <end type="SOURCE" refId="6" navigable="false">      
       <attribute id="12" name="device">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
@@ -86,51 +82,26 @@
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="14">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
-  <realization id="15">    
+  <association id="14">    
+    <bendpoint x="742" y="-16"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="15" name="device">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="16" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="17">    
     <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="6"/>  
+    <end type="TARGET" refId="5"/>  
   </realization>  
-  <realization id="16">    
-    <bendpoint x="741" y="78"/>    
-    <bendpoint x="602" y="78"/>    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="6"/>  
-  </realization>  
-  <association id="17">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="18" name="device">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="19" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="20">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
-  <association id="21">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="22" name="lastCommand">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="23" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
