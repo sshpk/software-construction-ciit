@@ -11,11 +11,13 @@ public class Demo {
 		cart.addItem(item1);
 		cart.addItem(item2);
 
+		cart.setPaymentMethod(new PaypalStrategy("myemail@example.com", "mypwd"));
 		//pay by paypal
-		cart.pay(new PaypalStrategy("myemail@example.com", "mypwd"));
+		cart.checkout();
 
 		//pay by credit card
-		cart.pay(new CreditCardStrategy("Syed Sajid Hussain", "1234567890123456", "1234", "12/15"));
+		cart.setPaymentMethod(new CreditCardStrategy("Syed Sajid Hussain", "1234567890123456", "1234", "12/15"));
+		cart.checkout();
 
 	}
 

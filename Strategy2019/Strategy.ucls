@@ -4,7 +4,7 @@
   <interface id="1" language="java" name="pk.cui.sc.strategy.TextFormatter" project="Strategy2019" 
     file="/Strategy2019/src/pk/cui/sc/strategy/TextFormatter.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="712" y="54"/>    
-    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -13,7 +13,7 @@
   <class id="2" language="java" name="pk.cui.sc.strategy.LowerTextFormatter" project="Strategy2019" 
     file="/Strategy2019/src/pk/cui/sc/strategy/LowerTextFormatter.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="606" y="188"/>    
-    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -22,7 +22,7 @@
   <class id="3" language="java" name="pk.cui.sc.strategy.TextEditor" project="Strategy2019" 
     file="/Strategy2019/src/pk/cui/sc/strategy/TextEditor.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="474" y="54"/>    
-    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -31,26 +31,30 @@
   <class id="4" language="java" name="pk.cui.sc.strategy.CapTextFormatter" project="Strategy2019" 
     file="/Strategy2019/src/pk/cui/sc/strategy/CapTextFormatter.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="85" width="126" x="717" y="148"/>    
-    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="5">    
+  <realization id="5">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <association id="6">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="6" name="textFormatter"/>      
-      <multiplicity id="7" minimum="0" maximum="1"/>    
+      <attribute id="7" name="textFormatter">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="8" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="8">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
   <realization id="9">    
-    <end type="SOURCE" refId="2"/>    
+    <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="1"/>  
   </realization>  
   <classifier-display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
