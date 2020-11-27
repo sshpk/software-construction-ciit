@@ -2,7 +2,7 @@ package pk.ciit.TemplateMethod;
 
 abstract public class DataParser {
     //Template method
-    public void parseDataAndGenerateOutput(){
+    public final void parseDataAndGenerateOutput(){
         readData();
         processData();
         writeData();
